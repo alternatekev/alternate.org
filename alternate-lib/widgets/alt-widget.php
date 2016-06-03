@@ -12,5 +12,6 @@ class AltWidget extends WP_Widget {
 	}
 
 	public function form(){}
+	public function widget(){}
 
 }
