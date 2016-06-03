@@ -1,0 +1,52 @@
+@import "colors";
+
+$display: 	'Macula Background', 'San Francisco', 'Helvetica', 'Arial', sans;
+$text: 	'Helsinki', 'San Franisco', 'Helvetica Condensed', 'Arial Condensed', 'Helvetica', 'Arial', sans;
+
+$largest: 	28px;
+$large: 	24px;
+$medium: 	20px;
+$regular: 	18px;
+$small: 	14px;
+
+h1, h2, h3 { font-family: $display; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; }
+h4, h5, h6 { font-family: $text; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; }
+strong, p, li, em, div { font-family: $text; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; }
+
+header {
+	h1.description {
+		font-size: 			$large;
+		padding-top: 		14px;
+	}
+
+	h1 {
+		font-size: $large;
+	}
+
+	h2 {
+		font-size: 			$regular;
+
+		.description {
+			display: 		block;
+			opacity: 		$dimmed;
+
+			&.hdr-logo-link {
+				padding-top: 4px;
+				font-size: $small;
+				opacity: 	$half;
+			}
+		}
+
+		small {
+			font-family: 	$text;
+			text-transform: 	uppercase;
+			font-size: 		$small;
+			opacity: 		$half;
+
+			&.domain {
+				opacity: 	$half;
+			}
+		}
+	}
+
+}

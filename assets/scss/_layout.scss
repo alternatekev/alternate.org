@@ -1,0 +1,100 @@
+@import 'assets/lib/bootstrap-4.0.0-alpha.2/dist/css/bootstrap.css';
+$maxwidth: 1084px;
+
+html {
+	padding: 10px;
+}
+
+body {
+	padding-top: 20px;
+}
+
+.page-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media( max-width: 780px ){
+		height: auto;
+	}
+}
+
+.home {
+	.page-container {
+		height: calc( 100vh - 50px );
+	}
+}
+
+.content-container {
+	width: 100%;
+	flex: none;
+	-webkit-box-flex: none;
+	max-width: $maxwidth;
+
+	&.showing-portfolio {
+	}
+}
+
+.menu-item {
+	//padding: 5px;
+}
+
+.home-projects {
+	.menu-item {
+		position: relative;
+		.grid-module {
+			height: 125px;
+		}
+	}
+}
+
+.grid-module {
+	//background: rgba( 255, 255, 255, 0.5 );
+	height: 250px;
+	z-index: 100;
+	position: relative;
+}
+
+.sidebar .grid-module{
+	height: 125px;
+}
+
+.sidebar .home-projects .featured .grid-module {
+	height: 195px;
+}
+
+
+.featured, .home-projects .featured {
+	.grid-module {
+		height: 250px;
+	}
+}
+
+.grid-module-image {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.site-name,
+.site-description {
+	padding: 0 5px 15px 5px;
+}
+
+.tease {
+	border-radius: 5px;
+	margin-bottom: 30px;
+
+	.grid-module-image {
+		position: relative;
+		margin-top: 5px;
+	}
+}
+
+header.header {
+	overflow: hidden;
+}

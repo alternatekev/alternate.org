@@ -1,0 +1,25 @@
+.widget-field {
+	display: flex;
+	margin: 5px 0;
+}
+
+.field-label {
+	flex: 1;
+	padding-right: 5px;
+	line-height: 1;
+	justify-content: center;
+
+	label {
+		line-height: 20px;
+		font-weight: 700;
+	}
+}
+
+.field-input {
+	flex: 3;
+
+	input, select {
+		max-width: 100%;
+		width: 100%;
+	}
+}

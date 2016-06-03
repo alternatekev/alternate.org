@@ -1,0 +1,12 @@
+{% set pieces = post.get_field('portfolio_piece') %}
+
+{% for piece in pieces %}
+	<div class="row">
+
+		<div class="col-md-12">
+			<img src="{{ TimberImage( piece.image ).src }}" class="portfolio-image large" />
+		</div>
+
+	</div>
+
+{% endfor %}

@@ -1,0 +1,18 @@
+
+{% for item in home_links.get_items %}
+	<div class="col-md-{{item.custom['menu-item-columns']}} {{ item.classes | join(' ') }}">
+
+		<style media="screen">
+			.nav-main-link:hover .module-{{ item.object_id }} {
+				background-image: url( {{images[ item.object_id ]}} );
+			}
+		</style>
+
+		<a class="nav-main-link" href="{{ item.get_link }}">
+			<div class="grid-module-image module-{{ item.object_id }}"></div>
+			<div class="grid-module">
+				<span class="module-name">{{ item.name }}</span>
+			</div>
+		</a>
+	</div>
+{% endfor %}

@@ -1,0 +1,45 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<div class="page-container">
+			<div class="container-fluid content-container">
+				{% block header %}
+					<header class="header row" >
+						<div class="col-md-3 site-description">
+							<a href="{{ options.contact_me_page }}" rel="home">
+								<h2 class="hdr-name" role="banner">
+									<span class="description">{{ options.name }}</span>
+									<small>{{ options.city }} &bull; {{ options.state }}</small>
+								</h2>
+							</a>
+						</div>
+						<div class="col-md-3 site-name">
+							<h2 class="hdr-name" role="banner">
+								<a class="hdr-logo-link description" href="/" rel="home">{{ site.name }}</a>
+								<small class="domain">{{ site.description }}</small>
+							</h2>
+						</div>
+					</header>
+				{% endblock %}
+				<div class="row">
+					{% block content %}{% endblock %}
+					{% block projects_block %}{% endblock %}
+					{% block links_block %}{% endblock %}
+				</div>
+
+				{% block footer %}
+					<footer id="footer">
+						{% include 'footer.twig' %}
+					</footer>
+					{{ function('wp_footer') }}
+				{% endblock %}
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="col-md-6 home-projects">
+	<div class="row">
+	{% for item in projects.get_items %}
+		<div class="col-md-{{ item.custom['menu-item-columns'] }} {{ item.classes | join(' ') }}">
+			{% set post = TimberPost( item._menu_item_object_id ) %}
+			{% set image = post.get_field( 'featured_image' ) %}
+			{% set primary_collection = post.terms( 'primary_collection' ) %}
+			<style media="screen">
+				.nav-main-link:hover .module-{{ item.object_id }} {
+					background-image: url({{ image.url }} );
+				}
+			</style>
+			<a class="nav-main-link" href="{{ item.get_link }}">
+				<div class="grid-module-image module-{{ item.object_id }}"></div>
+				<div class="grid-module">
+					<div class="module-name">
+						{{ item.name }}
+						{% for primary in primary_collection %}
+							<span class="module-collection">{{ primary.name }}</span>
+						{% endfor %}
+					</div>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+	</div>
+</div>

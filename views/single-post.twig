@@ -1,0 +1,25 @@
+{% set image = post.get_field('featured_image') %}
+
+<article class="col-md-12 tease tease-{{ post.post_type }}" id="tease-{{ post.ID }}" >
+	<div class="entry-content">
+		{% block content %}
+			<div class="grid-module-image row">
+				<div class="col-md-8">
+					<h1>{{ post.title }}</h1>
+					<div class="terms meta">
+						Posted by <strong>{{ post.author }}</strong> on {{ post.date }}
+					</div>
+					{{ post.content }}
+				</div>
+				<div class="col-md-4 portfolio-images-container page">
+					<div class="portfolio-image-container">
+						<img src="{{ post.thumbnail.src }}" class="portfolio-image featured-image large" />
+						{% if post.post_name == 'about' %}
+							{{ function('do_shortcode', '[wdi_feed id="1"]') }}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endblock %}
+	</div>
+</article>

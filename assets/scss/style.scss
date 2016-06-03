@@ -1,0 +1,21 @@
+/*
+Theme Name: Alternate.org
+Theme URI: https://github.com/alternatekev/alternate-org
+Author: Kevin Conboy
+Author URI: https://alternate.org/
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: alt
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "reset";
+@import "typography";
+@import "layout";
+@import "colors";
+@import "special";
+@import "content";
+@import "admin";

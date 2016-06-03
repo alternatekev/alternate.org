@@ -1,0 +1,28 @@
+{% set pieces = post.get_field('portfolio_piece') %}
+{% set image = post.get_field('featured_image') %}
+
+<article class="col-md-12 tease tease-{{ post.post_type }}" id="tease-{{ post.ID }}" >
+
+	<div class="entry-content">
+		{% block content %}
+			<div class="grid-module-image row">
+				<div class="col-md-12">
+					<h1>{{ post.title }}</h1>
+				</div>
+				<div class="col-md-6">
+					{{ post.content }}
+				</div>
+				<div class="col-md-6 portfolio-images-container">
+					<div class="col-md-12 portfolio-image-container launch-portfolio">
+						<img src="{{ image.url }}" class="portfolio-image featured-image" />
+						<button class="view-portfolio">View Portfolio</button>
+					</div>
+					{% for piece in pieces %}
+					<div class="col-md-12 portfolio-image-container popup">
+						<img src="{{ TimberImage( piece.image ).src }}" class="portfolio-image" />
+					</div>
+					{% endfor %}
+				</div>
+		{% endblock %}
+	</div>
+</article>

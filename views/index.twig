@@ -1,0 +1,24 @@
+{% extends "base-sidebar.twig" %}
+
+{% block content %}
+	<p>{{qux}}</p>
+	{% for post in posts %}
+		{% include ['single-'~post.post_type~'.twig', 'post.twig'] %}
+	{% endfor %}
+{% endblock %}
+
+{% block projects_block %}
+	{% include 'home-projects-sidebar.twig' %}
+{% endblock %}
+
+{% block links_block %}
+	{% include 'home-links-sidebar.twig' %}
+{% endblock %}
+
+{% block portfolio %}
+	{% for post in posts %}
+		<div class="container-fluid">
+			{% include 'portfolio-viewer.twig' %}
+		</div>
+	{% endfor %}
+{% endblock %}
