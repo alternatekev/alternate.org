@@ -13,16 +13,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	@media( max-width: 780px ){
-		height: auto;
-	}
-}
-
-.home {
-	.page-container {
-		//height: calc( 100vh - 50px );
-	}
 }
 
 .content-container {
@@ -97,4 +87,9 @@ body {
 
 header.header {
 	overflow: hidden;
+}
+
+.sidebar.portfolio-container {
+	margin-left: -25px;
+	margin-right: -25px;
 }
