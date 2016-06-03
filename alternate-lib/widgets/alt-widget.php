@@ -11,4 +11,6 @@ class AltWidget extends WP_Widget {
 		return $instance;
 	}
 
+	public function form(){}
+
 }
