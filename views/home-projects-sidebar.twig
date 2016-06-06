@@ -1,7 +1,7 @@
 <div class="col-md-12 home-projects">
 	<div class="row">
 	{% for item in projects.get_items %}
-		<div class="col-md-{{ item.custom['menu-item-columns'] }} {{ item.classes | join(' ') }}">
+		<div class="col-md-12 {{ item.classes | join(' ') }}">
 			<a class="nav-main-link" href="{{ item.get_link }}">
 				<div class="grid-module-image module-{{ item.object_id }}"></div>
 				<div class="grid-module">

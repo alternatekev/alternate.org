@@ -1,6 +1,6 @@
 
 {% for item in home_links.get_items %}
-	<div class="col-md-{{ item.custom['menu-item-columns'] * 2 }} {{item.classes | join(' ')}}">
+	<div class="col-md-12 {{item.classes | join(' ')}}">
 		<a class="nav-main-link" href="{{item.get_link}}">
 			<div class="grid-module-image"></div>
 			<div class="grid-module">

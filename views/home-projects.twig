@@ -8,10 +8,10 @@
 			<style media="screen">
 				.nav-main-link .module-{{ item.object_id }} {
 					background-image: url( {{ image.url }} );
-					-webkit-filter: grayscale( 1 );
+					filter: grayscale( 1 );
 				}
 				.nav-main-link:hover .module-{{ item.object_id }} {
-					-webkit-filter: grayscale( 0 );
+					filter: grayscale( 0 );
 				}
 			</style>
 			<img src="{{ image.url }}" style="display:none;" />

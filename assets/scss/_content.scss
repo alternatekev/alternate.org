@@ -49,23 +49,25 @@
 	.home-projects {
 		margin-bottom: 0px;
 	}
+
 	.menu-item {
 		.grid-module-image {
 			opacity: 0.45;
+			background: transparent;
 		}
 
 		&:hover {
 			.grid-module-image {
-				opacity: 0.25;
+				opacity: 0.45;
 			}
 			.module-name {
-				color: rgba( 255, 255, 255, 0.9 );
+				color: rgba( 255, 255, 255, 0.75 );
 			}
 		}
 
 		.module-name {
 			font-size: 14px;
-			color: rgba( 255, 255, 255, 0.75 );
+			color: rgba( 255, 255, 255, 0.35 );
 		}
 	}
 }
