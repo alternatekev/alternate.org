@@ -6,8 +6,12 @@
 			{% set image = post.get_field( 'featured_image' ) %}
 			{% set primary_collection = post.terms( 'primary_collection' ) %}
 			<style media="screen">
-				.nav-main-link:hover .module-{{ item.object_id }} {
+				.nav-main-link .module-{{ item.object_id }} {
 					background-image: url( {{ image.url }} );
+					-webkit-filter: grayscale( 1 );
+				}
+				.nav-main-link:hover .module-{{ item.object_id }} {
+					-webkit-filter: grayscale( 0 );
 				}
 			</style>
 			<img src="{{ image.url }}" style="display:none;" />

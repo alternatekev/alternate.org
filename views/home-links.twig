@@ -3,8 +3,13 @@
 	<div class="col-md-{{ item.custom[ 'menu-item-columns' ] }} {{ item.classes | join(' ') }}">
 
 		<style media="screen">
-			.nav-main-link:hover .module-{{ item.object_id }} {
+			.nav-main-link .module-{{ item.object_id }} {
 				background-image: url( {{ images[ item.object_id ] }} );
+				-webkit-filter: grayscale( 1 );
+				-webkit-filter: blur( 0.5 );
+			}
+			.nav-main-link:hover .module-{{ item.object_id }} {
+				-webkit-filter: grayscale( 0 );
 			}
 		</style>
 		<img src="{{ images[ item.object_id ] }}" style="display:none;" />
