@@ -9,7 +9,7 @@
 		background-size: cover;
 		background-position: center center;
 		background-color: #FFF;
-		opacity: 0.35;
+		opacity: 0.55;
 		transform-style: preserve-3d;
 		transition: all 300ms ease-out;
 		box-shadow: 0px 0px 0px #fff inset;
@@ -52,13 +52,13 @@
 
 	.menu-item {
 		.grid-module-image {
-			opacity: 0.45;
+			opacity: 0.75;
 			background: transparent;
 		}
 
 		&:hover {
 			.grid-module-image {
-				opacity: 0.45;
+				opacity: 0.55;
 			}
 			.module-name {
 				color: rgba( 255, 255, 255, 0.75 );
@@ -68,8 +68,8 @@
 		&.current-menu-item {
 			.grid-module-image {
 				background: transparent;
-				opacity: 0.45;
-				box-shadow: 0px 0px 70px rgba( 255, 255, 255, 0.5) inset;
+				opacity: 0.75;
+				box-shadow: 0px 0px 70px rgba( 255, 255, 255, 0.75) inset;
 
 			}
 			.module-name {
@@ -79,7 +79,7 @@
 
 		.module-name {
 			font-size: 14px;
-			color: rgba( 255, 255, 255, 0.35 );
+			color: rgba( 255, 255, 255, 0.55 );
 		}
 	}
 }
@@ -95,7 +95,8 @@
 }
 
 .entry-content {
-	box-shadow: 0px 0px 70px rgba( 0, 0, 0, 0.35) inset;
+	margin-top: 20px;
+
 	h1, h2, h3, p, li, strong, span, {
 		text-shadow: 0px 1px 2px rgba( 0, 0, 0, 0.5 );
 	}
@@ -105,14 +106,16 @@
 	}
 
 	h1 {
-		font-size: $largest;
+		font-size: $super;
 	}
 
 	h2 {
 		margin-top: 20px;
 		margin-bottom: 15px;
-		font-size: $medium;
-		opacity: 0.55;
+		font-size: $regular;
+		font-family: $display;
+		opacity: 1;
+		text-transform: uppercase;
 	}
 
 	h3 {
@@ -171,8 +174,10 @@
 		}
 	}
 
-	p {
-		line-height: 1.125;
+	p,li {
+		line-height: 1.25;
+		letter-spacing: 0.025em;
+		opacity: 0.85;
 	}
 
 	ul {
