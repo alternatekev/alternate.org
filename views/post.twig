@@ -11,14 +11,14 @@
 				<div class="col-md-12">
 					<h1>{{ post.title }}</h1>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<span class="terms">
 						{% for primary in primary_collection %}<strong>{{ primary.name }}</strong>{% endfor %}{% for collection in collections %}<span>, {{ collection.name }}</span>{% endfor %}
 					</span>
 
 					{{ post.content }}
 				</div>
-				<div class="col-md-6 portfolio-images-container">
+				<div class="col-md-7 portfolio-images-container">
 					<div class="col-md-12 portfolio-image-container launch-portfolio">
 						<img src="{{ image.url }}" class="portfolio-image featured-image" />
 						<button class="view-portfolio">View Portfolio</button>
