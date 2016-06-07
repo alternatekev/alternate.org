@@ -9,12 +9,12 @@
 					{{ post.content }}
 				</div>
 				<div class="col-md-6 portfolio-images-container page">
-					<div class="portfolio-image-container">
-						<img src="{{ post.thumbnail.src }}" class="portfolio-image featured-image large" />
-						{% if post.post_name == 'about' %}
-							{{ function('do_shortcode', '[wdi_feed id="1"]') }}
-						{% endif %}
-					</div>
+
+					<img src="{{ post.thumbnail.src }}" class="portfolio-image featured-image large" />
+					{% if post.post_name == 'about' %}
+						{{ function('do_shortcode', '[wdi_feed id="1"]') }}
+					{% endif %}
+
 				</div>
 			</div>
 		{% endblock %}
