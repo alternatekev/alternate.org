@@ -65,6 +65,18 @@
 			}
 		}
 
+		&.current-menu-item {
+			.grid-module-image {
+				background: transparent;
+				opacity: 0.45;
+				box-shadow: 0px 0px 70px rgba( 255, 255, 255, 0.5) inset;
+
+			}
+			.module-name {
+				color: rgba( 255, 255, 255, 0.75 );
+			}
+		}
+
 		.module-name {
 			font-size: 14px;
 			color: rgba( 255, 255, 255, 0.35 );
