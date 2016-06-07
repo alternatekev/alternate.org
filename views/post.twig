@@ -26,6 +26,7 @@
 					{% for piece in pieces %}
 					<div class="col-md-12 portfolio-image-container popup">
 						<img src="{{ TimberImage( piece.image ).src }}" class="portfolio-image" />
+						<div class="portfolio-description">{{ piece.description }}</div>
 					</div>
 					{% endfor %}
 				</div>

@@ -2,11 +2,9 @@
 
 {% for piece in pieces %}
 	<div class="row">
-
 		<div class="col-md-12">
+			<div class="portfolio-description">{{ piece.description }}</div>
 			<img src="{{ TimberImage( piece.image ).src }}" class="portfolio-image large" />
 		</div>
-
 	</div>
-
 {% endfor %}

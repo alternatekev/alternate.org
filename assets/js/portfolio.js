@@ -57,6 +57,8 @@
 			$( '.portfolio-viewer.single-image' ).empty();
 
 			var image = $( this ).find( 'img.portfolio-image' );
+			var description = $( this ).find( '.portfolio-description' );
+			description.clone().appendTo( '.portfolio-viewer.single-image' ).addClass( 'show' );
 			image.clone().appendTo( '.portfolio-viewer.single-image' ).addClass( 'large' );
 
 			$( '.portfolio-container' ).addClass( 'hide' );
