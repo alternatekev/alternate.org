@@ -5,10 +5,11 @@
 		<style media="screen">
 			.nav-main-link .module-{{ item.object_id }} {
 				background-image: url( {{ images[ item.object_id ] }} );
-				filter: grayscale( 0.5 );
+				filter: grayscale( 0.25 );
 			}
 			.nav-main-link:hover .module-{{ item.object_id }} {
 				filter: grayscale( 0 );
+				opacity: 0.55;
 			}
 		</style>
 		<img src="{{ images[ item.object_id ] }}" style="display:none;" />

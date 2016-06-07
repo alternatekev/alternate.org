@@ -9,16 +9,14 @@
 		background-size: cover;
 		background-position: center center;
 		background-color: #FFF;
-		opacity: 0.55;
+		opacity: 0.85;
 		transform-style: preserve-3d;
 		transition: all 300ms ease-out;
-		box-shadow: 0px 0px 0px #fff inset;
 	}
 
 	&:hover {
 		.grid-module-image {
-			opacity: 0.9;
-			box-shadow: 0px 0px 70px rgba( 255, 255, 255, 0.5) inset;
+			opacity: 0.95;
 		}
 
 		.module-name {
@@ -52,7 +50,7 @@
 
 	.menu-item {
 		.grid-module-image {
-			opacity: 0.75;
+			opacity: 0.85;
 			background: transparent;
 		}
 
@@ -69,7 +67,7 @@
 			.grid-module-image {
 				background: transparent;
 				opacity: 0.75;
-				box-shadow: 0px 0px 70px rgba( 255, 255, 255, 0.75) inset;
+				box-shadow: 0px 0px 30px rgba( 255, 255, 255, 0.35) inset;
 
 			}
 			.module-name {
