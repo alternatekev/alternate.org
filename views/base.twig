@@ -20,10 +20,12 @@
 							</a>
 						</div>
 						<div class="col-md-3 site-name">
-							<h2 class="hdr-name" role="banner">
-								<a class="hdr-logo-link description" href="/" rel="home">{{ site.name }}</a>
-								<small class="domain">{{ site.description }}</small>
-							</h2>
+							<a href="/" rel="home">
+								<h2 class="hdr-name" role="banner">
+									<span class="description">{{ site.name }}</span>
+									<small>{{ site.description }}</small>
+								</h2>
+							</a>
 						</div>
 					</header>
 				{% endblock %}
