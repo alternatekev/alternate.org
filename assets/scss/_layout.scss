@@ -40,9 +40,13 @@ body {
 
 .grid-module {
 	//background: rgba( 255, 255, 255, 0.5 );
-	height: 250px;
+	height: 125px;
 	z-index: 100;
 	position: relative;
+
+	&.featured {
+		height: 250px;
+	}
 }
 
 .sidebar .grid-module{
