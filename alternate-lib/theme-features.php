@@ -41,7 +41,7 @@ class ThemeFeatures {
 		add_action( 'customize_register', array( $this, 'customizer' ) );
 
 		// render custom CSS output
-		add_action( 'wp_head', array( $this, 'render_css' ) );
+		//add_action( 'wp_head', array( $this, 'render_css' ) );
 
 	}
 
