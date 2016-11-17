@@ -40,9 +40,6 @@ class ThemeFeatures {
 		// register support for custom colors
 		add_action( 'customize_register', array( $this, 'customizer' ) );
 
-		// render custom CSS output
-		//add_action( 'wp_head', array( $this, 'render_css' ) );
-
 	}
 
 	function customizer( $wp_customize ) {
@@ -77,16 +74,6 @@ class ThemeFeatures {
 			),
 		'active_callback' 	=> 'is_front_page',
 		) );
-	}
-
-	function render_css() {
-		?>
-		<style type="text/css">
-			h1, h2, h3, h4, h5, h6, p, strong, li, a {
-				color:<?php echo get_theme_mod( 'text_color', '#FFFFFF' ); ?>;
-			}
-		</style>
-		<?php
 	}
 
 	function add_menu_support() {
