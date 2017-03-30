@@ -19,6 +19,13 @@ class ThemeFeatures {
 
 		//add slideshow
 		$this->add_slideshow_support();
+
+		//add crossdomain support to json
+		$this->add_crossdomain_support();
+	}
+
+	function add_crossdomain_support() {
+		add_filter( 'allowed_http_origin', '__return_true' );
 	}
 
 	function add_options_page() {
