@@ -25,7 +25,7 @@ class ThemeFeatures {
 	}
 
 	function add_crossdomain_support() {
-		add_filter( 'allowed_http_origin', '__return_true' );
+		add_filter('http_origin', function() { return "https://alternate-react-tvevkvirtg.now.sh";});
 	}
 
 	function add_options_page() {
